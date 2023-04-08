@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-7kg4%((2duivkfb=2lcv%u6$4+-ic60e$qtr=ivo7srf+h!iul'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True #Для того, чтобы ошибки не отображались или отображались на сайт
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [] #указывается список хостов, которые имеют разрешение на доступ к приложению. нужно для безопасности
 
 
 # Application definition
@@ -37,10 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'store.apps.StoreConfig'
+    'store.apps.StoreConfig'  #всегда прописываем сюда приложение, которое создали
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE = [ # это список всех промежуточных компонентов, используемых в Django при обработке запросов и ответов
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'ecommerce.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [], #указывает, где искать шаблоны. напр можно указ os.path.join(BASE_DIR, 'myapp', 'templates'). по умолч ищет в директ приложения
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -116,11 +116,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 import os
-STATIC_URL = 'static/'
+STATIC_URL = 'static/' #хранение изобр, css, js. не изменяются в процессе работы
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static')
 ]
-MEDIA_URL = '/images/'
+MEDIA_URL = '/images/' #хранение изобр аудио и видеофайлов. изменяются в процессе работы
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
 # Default primary key field type

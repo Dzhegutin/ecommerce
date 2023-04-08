@@ -1,98 +1,98 @@
 body{
-	background-color: hsl(0, 0%, 98%);
+	background-color: hsl(0%, 0%, 98%); /* устанавливает цвет фона для всего документа */
 }
 
 h1,h2,h3,h4,h5,h6{
-	color:hsl(0, 0%, 30%);
+	color:hsl(0, 0%, 30%); /* устанавливает цвет заголовков */
 }
 
-.box-element{
-	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
-	background-color: #ffffff;
-	border-radius: 4px;
-	padding: 10px;
+.box-element{                           /* отвечает за боксы товаров */
+	box-shadow:hsl(0, 0%, 80%) 0 0 16px; /* тень */
+	background-color: #ffffff; /* цвет бокса */
+	border-radius: 4px;    /* радиус скругления углов элемента */
+	padding: 10px;          /* определяет отступы по всем четырем сторонам элемента */
 }
 
-.thumbnail{
-	width: 100%;
-	height: 200px;
-	-webkit-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+.thumbnail{                    /* тут задали действия с изображением */
+	width: 100%;                   /* ширина */
+	height: 200px; /*высота */
+	-webkit-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1); /*тень для разных браузеров */
     -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
     box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
 }
 
 .product{
-	border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;             /* скругление бокса. 4 параметр - каждый за свою сторону отвеч */
 }
 
 
-#cart-icon{
-	width:25px;
-	display: inline-block;
-	margin-left: 15px;
+#cart-icon{ /*это селектор, он уникальный для каждого элемента */
+	width:25px;             /* ширина корзины */
+	display: inline-block;             /* элемент будет отображаться в строке внутри блока и не будет занимать всю доступную ширину. */
+	margin-left: 20px;             /* отступ слева для элемента */
 }
 
-#cart-total{
-	display: block;
-	text-align: center;
-	color:#fff;
-	background-color: red;
+#cart-total{             /* кружок возле корзины */
+	display: block;             /* блочный элемент, может занимать всю ширину */
+	text-align: center;             /* выравнивание текста по центру */
+	color:#fff;             /* цвет текста */
+	background-color: red;             /* устанавливает цвет фона(кружка) */
 	width: 20px;
 	height: 25px;
-	border-radius: 50%;
-	font-size: 14px;
+	border-radius: 50%;             /* степень округления */
+	font-size: 14px;             /* размер текста */
 }
 
 .col-lg-4, .col-lg-6, .col-lg-8, .col-lg-12{
-	margin-top: 10px;
+	margin-top: 10px;          /* отступ сверху для блока товаров */
 }
 
 .btn{
-	border-radius: 0;
+	border-radius: 30%;             /* округление кнопок*/
 }
 
 .row-image{
 	width: 100px;
-}
+}             /* размер картинки в checkout */
 
 .form-field{
-	width:250px;
+	width:250px;             /* ширина формы */
 	display: inline-block;
-	padding: 5px;
+	padding: 5px; /*  отступы вокруг содержимого элемента */
 }
 
-.cart-row{
-	display: flex;
-    align-items: flex-stretch;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ececec;
-
-}
-
-.quantity{
-	display: inline-block;
-	font-weight: 700;
-	padding-right:10px;
-
+.cart-row{      /* список выбранных товаров в checkout и cart */
+	display: flex;             /* устанавливает контейнеру CSS-свойство "flex" и превращает его содержимое в гибкую модель (flexbox). */
+    align-items: flex-stretch;             /*означает, что элементы растягиваются на всю доступную высоту родительского контейнера. */
+    padding-bottom: 10px;             /*  задает внутренний отступ для нижней границы для каждого подблока */
+    margin-bottom: 10px;             /*  задает верхний отступ для каждого подблока  */
+    border-bottom: 1px solid #ececec;             /* чертит линию между подблоками #ececec этого цвета */
 
 }
 
-.chg-quantity{
+.quantity{  /* формирование количества товаров */
+	display: inline-block;             /* устанавливает цвет заголовков */
+	font-weight: 700;             /* устанавливает жирность шрифта */
+	padding-right:10px;             /*  увеличивает расстояние между содержимым элемента и его правым краем. */
+
+
+}
+
+.chg-quantity{        /* стрелочки уменьш/увелич кол-ва товара */
 	width: 12px;
-	cursor: pointer;
+	cursor: pointer;             /* устанавливает вид курсора мыши при наведении на элемент */
 	display: block;
-	margin-top: 5px;
-	transition:.1s;
+	margin-top: 5px;             /* отступ сверху от элемента на 5 пикселей */
+	transition:.1s;                 /*  позволяет создавать плавные переходы между двумя состояниями элемента при изменении какого-либо свойства */
 }
 
 .chg-quantity:hover{
-	opacity: .6;
+	opacity: .6;             /*  задает непрозрачность элемента при наведении на него курсора мыши */
 }
 
 
 .hidden{
-	display: none!important;
+	display: none!important;             /*свойство CSS, которое скрывает элемент на странице, убирая его из потока документа и не отображая его на экране*/
 }
 .bg-green {
-background-color: #1E786C}
+background-color: #1E786C}             /* цвет верхней шапки страницы*/
